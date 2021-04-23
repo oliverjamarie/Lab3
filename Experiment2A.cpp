@@ -57,11 +57,11 @@ struct List {
         Node *curr = head;
         int count = 0;
 
-        if (curr == NULL){
+        if (curr == NULL || i <= 0){
             return -1;
         }
 
-        while(curr != NULL && (count < i || i == 0)){
+        while(count < i){
             if (curr == NULL)
                 return -1;
             if (count == i){
@@ -82,11 +82,11 @@ struct List {
         int i = 0;
         Node *curr = head;
 
-        if (curr == NULL){
+        if (curr == NULL || index <= 0){
             return;
         }
 
-        while(curr != NULL && (i < i || index == 0)){
+        while(i < index){
             if (curr == NULL)
                 return ;
             if (i == i){
@@ -101,6 +101,7 @@ struct List {
 int main(){
     int arrLen = 100, numArrays = 1000000, maxNum = 100;
     int *arr;
+    int exp = 10;
     double cpu_time_used;
     clock_t start, end;
     List *list = new List();
@@ -108,18 +109,14 @@ int main(){
     start = clock();
 
     srand(time(0));
-    
 
-    for (int i = 0; i < numArrays; i++){
-        arr = new int[arrLen];
-        
-        for (int k = 0; k < 100; k++){
-            arr[k] = rand()%maxNum;
-        }
-
-        list->push(arr, 100);
-        
+    arr = new int[arrLen];
+    for (int k = 0; k < arrLen; k++){
+            arr[k] = k;
     }
+    list->push(arr, 100);
+    delete [] arr;
+
 
     for (int i = 0; i < 500; i ++){
         for (int j = 0; j < 100; j++){
@@ -127,17 +124,21 @@ int main(){
         }
     }
 
-    cout << "#1\n";
+    //cout << "#1\n";
 
     for (int i = 0; i < 500; i ++){
+        
         for (int j = 0; j < 100; j++){
-            list->retrieve(rand()%numArrays, rand()%arrLen);
+            int randNumArrays = rand()%numArrays,
+                randArrLen = rand()%arrLen;
+
+            list->retrieve(randNumArrays, randArrLen);
         }
     }
 
-    cout << "#2\n";
+    //cout << "#2\n";
 
-    
+    exp = 10;
     for (int i = 0; i < 2000000; i ++){
         arrLen = 1 + rand()%199;
         arr = new int[arrLen];
@@ -147,10 +148,17 @@ int main(){
         }
 
         list->push(arr,arrLen);
+        delete [] arr;
     }
-    cout << "#3\n";
+
+    exp = 10;
+    //cout << "#3\n";
     for (int i = 0; i < 500000; i ++){
-        
+
+        if (i == exp){
+            exp *= 2;
+        }
+
         list->retrieve(i,0);
     }
 
@@ -159,5 +167,5 @@ int main(){
 
     cout << "DONE in \t" << cpu_time_used << "\t seconds or \t" << cpu_time_used / 60 << "\t minutes\n";
        
-    return 1;
+    return 0;
 }

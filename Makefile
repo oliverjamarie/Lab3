@@ -1,24 +1,20 @@
-all: Experiment1A.o Experiment1B.o Experiment2A.o
-	g++ Experiment1A.o -o outExp1A
-	g++ Experiment1B.o -o outExp1B
-	g++ Experiment2A.o -o outExp2A
+CALLGRIND = valgrind --tool=callgrind --simulate-cache=yes -v
 
+all: Dockerfile Experiment1A.cpp Experiment1B.cpp Experiment2A.cpp 
+	docker build -t lab3:latest .
 
-Experiment1A.o: Experiment1A.cpp
-	g++ -c Experiment1A.cpp -o Experiment1A.o
+runExp1A: 
+	docker run -ti -v $PWD lab3:latest bash -c " $(CALLGRIND) ./Experiment1A"
 
-Experiment1B.o: Experiment1B.cpp
-	g++ -c Experiment1B.cpp -o Experiment1B.o
+runExp1B:
+	docker run -ti -v $PWD lab3:latest bash -c " $(CALLGRIND) ./Experiment1B"
 
-Experiment2A.o: Experiment2A.cpp
-	g++ -c Experiment2A.cpp -o Experiment2A.o
+runExp2A:
+	docker run -ti -v $PWD lab3:latest bash -c " $(CALLGRIND) ./Experiment2A"
 
-BigClean:
-	rm *.o outExp1A outExp1B outExp2A callgrind.*.*
-
-clean:
-	rm *.o outExp1A outExp1B outExp2A
-
-
+runExp2B:
+	docker run -ti -v $PWD lab3:latest bash -c " $(CALLGRIND) ./Experiment2B"
+	
+# docker run --rm -it lab3:latest 
 #valgrind --tool=callgrind ./outExp1A
 #valgrind --tool=callgrind --simulate-cache=yes ./outExp1B

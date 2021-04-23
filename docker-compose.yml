@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  lab3:
+    image: lab3
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+  exp1A:
+    image: exp1A
+    build:
+      context: .
+      dockerfile: ./Exp1a.dockerfile

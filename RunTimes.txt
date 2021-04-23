@@ -1,0 +1,48 @@
+RUNNING Experiment 1
+DONE in 	0.006747	 seconds or 	0.00011245	 minutes
+DONE in 	0.008492	 seconds or 	0.000141533	 minutes
+DONE in 	0.008754	 seconds or 	0.0001459	 minutes
+DONE in 	0.00876	 seconds or 	0.000146	 minutes
+DONE in 	0.009524	 seconds or 	0.000158733	 minutes
+DONE in 	0.004457	 seconds or 	7.42833e-05	 minutes
+DONE in 	0.004132	 seconds or 	6.88667e-05	 minutes
+DONE in 	0.004807	 seconds or 	8.01167e-05	 minutes
+DONE in 	0.007009	 seconds or 	0.000116817	 minutes
+DONE in 	0.003889	 seconds or 	6.48167e-05	 minutes
+Ran Experiment 1
+RUNNING Experiment 1B
+DONE in 	0.003257	 seconds or 	5.42833e-05	 minutes
+DONE in 	0.003618	 seconds or 	6.03e-05	 minutes
+DONE in 	0.003772	 seconds or 	6.28667e-05	 minutes
+DONE in 	0.003503	 seconds or 	5.83833e-05	 minutes
+DONE in 	0.005909	 seconds or 	9.84833e-05	 minutes
+DONE in 	0.005297	 seconds or 	8.82833e-05	 minutes
+DONE in 	0.00584	 seconds or 	9.73333e-05	 minutes
+DONE in 	0.006031	 seconds or 	0.000100517	 minutes
+DONE in 	0.006537	 seconds or 	0.00010895	 minutes
+DONE in 	0.006647	 seconds or 	0.000110783	 minutes
+Ran Experiment 1B
+RUNNING Experiment 2A
+DONE in 	16637.4	 seconds or 	277.29	 minutes
+DONE in 	16641	 seconds or 	277.35	 minutes
+DONE in 	16650.4	 seconds or 	277.506	 minutes
+DONE in 	16651.4	 seconds or 	277.523	 minutes
+DONE in 	16654	 seconds or 	277.566	 minutes
+DONE in 	16673.7	 seconds or 	277.894	 minutes
+DONE in 	12094.3	 seconds or 	201.572	 minutes
+DONE in 	12113.9	 seconds or 	201.899	 minutes
+DONE in 	12114.5	 seconds or 	201.908	 minutes
+DONE in 	12119.1	 seconds or 	201.984	 minutes
+Ran Experiment 2A
+RUNNING Experiment 2B
+DONE in 	153.284	 seconds or 	2.55474	 minutes
+DONE in 	154.875	 seconds or 	2.58126	 minutes
+DONE in 	131.288	 seconds or 	2.18813	 minutes
+DONE in 	135.154	 seconds or 	2.25257	 minutes
+DONE in 	142.864	 seconds or 	2.38107	 minutes
+DONE in 	145.241	 seconds or 	2.42068	 minutes
+DONE in 	133.683	 seconds or 	2.22804	 minutes
+DONE in 	135.368	 seconds or 	2.25613	 minutes
+DONE in 	117.229	 seconds or 	1.95382	 minutes
+DONE in 	119.796	 seconds or 	1.9966	 minutes
+Ran Experiment 2B
